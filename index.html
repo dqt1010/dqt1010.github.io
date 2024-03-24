@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Qita Dai的个人主页</title>
+        <link rel="stylesheet" type="text/css" href="/main.css">
+        <link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+        <link rel="shortcut icon" href="/favicon.ico">
+        <meta name="keywords" content="DAI，DAIQI，DAIQITAO，TAO，DAIQITAO的主页，个人主页，主页">
+    </head>
+    <body style="background-color: #07081c;">
+        <canvas id="StarStage"></canvas>
+        <div class="container">
+        <div style="float: left;">
+            <div class="backgroundCard" style="background-image: url(/background.jpg);background-size: cover;background-repeat: no-repeat;">
+                <img src="/Facer.jpg" class="tx-Img" onmouseover="startRotation(this)" onmouseout="stopRotation(this)"><br>
+                <div class="h1">
+                    <h1>
+                        <span>Q</span>
+                        <span>i</span>
+                        <span>t</span>
+                        <span>a</span>
+                        <span> </span>
+                        <span>D</span>
+                        <span>a</span>
+                        <span>i</span>
+                    </h1>
+                  </div><br>
+                    <div id="quote" style="text-shadow: 3px 4px 4px rgba(0, 0, 0, 0.5);"></div>
+                    <div class="label">前端开发爱好者</div>
+                    <div class="label">爱玩原神</div>
+                    <div class="label">偏科战神</div><br><br>
+                    <center>
+                        <hr style="width:20%"><br>
+                        <p style="font-size:20px">赞助一下我吧：</p>
+                        <img src="https://ooo.0x0.ooo/2023/12/24/OKP02p.jpg" style="border-radius: 15px;box-shadow: 3px 4px 4px rgba(0, 0, 0, 0.5);" width="100px" heigth="100px">
+                    </center><br><br>
+            </div>
+            <div class="Card">
+                <center>
+                <button onclick="showSubpage('page1')" class="btn btn-light">简介</button>
+                <button onclick="showSubpage('page2')" class="btn btn-light" style="margin-left: 10px;">信息</button>
+                <button onclick="showSubpage('page3')" class="btn btn-light" style="margin-left: 10px;">账号</button>
+                <button onclick="showSubpage('page4')" class="btn btn-light" style="margin-left: 10px;">友链</button>
+              <div id="page1" class="subpage">
+               <h2 class="dark-h2">个人简介</h2>
+                <p>银河编程工作室创始人、yhCoding社区站长</p>
+                <p><span class="label">Scratch编程</span> & <span class="label">网页前端开发</span>爱好者</p>
+                <p>擅长：<span class="label">Scratch</span> <span class="label">Python</span> <span class="label">html</span> <span class="label">css</span> <span class="label">JavaScript</span> <span class="label">MySQL</span></p>
+               </div>
+              <div id="page2" class="subpage">
+                  <h2 class="dark-h2">个人信息</h2>
+                    <p>别名：DAIQITAO、琦怪的人呀、啥也不会的屑QITAO...</p>
+                    <p style="font-size:20px;color:#ddd">*ps：看到类似这些的社交账号昵称都是me哦~</p>
+                    <p>绰号：乞讨</p>
+                    <p>性别：男</p>
+                    <p>幸运数字：56</p>
+                    <p>兴趣爱好：吉他、素描、篮球、乒乓球、魔方</p>
+                    <p>口头禅：6、原神启动！、有没道德啊？道法白学了？</p>
+                    <p>格言：有些事情就是命中注定，尽管你多努力，也无法改变结局。</p>
+              </div>
+              <div id="page3" class="subpage">
+                  <h2 class="dark-h2">账号链接</h2>
+                    <a>原神UID：287711029</a><br>
+                    <a>泡泡IM：daiqitao</a><br>
+                    <a href="http://yhcoding.site/users/daiqitao">银河编程社区</a>
+                    <a href="https://scratch.mit.edu/users/DAIQITAO/">Scratch官网</a>
+                    <a href="https://www.ccw.site/student/6291a8064cf0c564bfc6129c">共创世界</a>
+                    <a href="https://40code.com/#page=user&id=1132">40code</a>
+                    <a href="https://codingclip.com/user/1564">别针社区</a>
+                    <a href="https://www.xiaohongshu.com/user/profile/631d7090000000002302712b">小红书</a><br>
+                    <a href="https://www.kuaishou.com/profile/3x944cy9wxuaxcq">快手</a>
+                    <a href="https://space.bilibili.com/1872994261">哔哩哔哩</a>
+                    <a href="https://shequ.codemao.cn/user/858933478">编程猫</a>
+                    <a href="https://github.com/dqt1010">Github</a>
+                    <a href="https://activity.kugou.com/share/v-c7b4da67/index.html?id=4854aa3ee90bc78067e06fd34f208cb1">酷狗音乐</a>
+              </div>
+              <div id="page4" class="subpage">
+                  <h2 class="dark-h2">友情链接</h2>
+                    <span><a href="https://undefined-kun.github.io">坤总的博客</a> | <a href="https://rundll86.github.io">Rundll86的主页</a> | <a href="http://yhcoding.site">银河编程社区</a></span><br>
+                    <p style="color:#ddd">加友链请联系QQ：1532486245</p>
+              </div>
+              </center>
+            </div><br>
+            <div class="projectCard">
+                <div class="projectbox container" onclick="window.open('http://yhcoding.site/','_blank')">
+                    <img class="projectbox facer" src="https://ooo.0x0.ooo/2023/12/30/OK9l9F.png"><br>
+                    <div class="projectbox content">
+                        <span class="projectbox content-title">yhCodingCommunity</span><br>
+                        <span class="projectbox content-text">这是一个搭载在线版图形化少儿编程以及Python的平台。你可以在这里创作作品，也可以与大家交流。</span><br>
+                        <span class="label">Web</span>
+                        <span class="label">线上网站</span>
+                    </div>
+                </div>
+                <div class="projectbox container" onclick="window.open('https://github.com/dqt1010/futureUI','_blank')">
+                    <img class="projectbox facer" src="https://s1.ax1x.com/2023/08/03/pPiwjPg.jpg"><br>
+                    <div class="projectbox content">
+                        <span class="projectbox content-title">「future UI」</span><br>
+                        <span class="projectbox content-text">本网站 and 银河编程社区的css。简约的UI，厉害在动画、渐变、圆、立体、透明等方面。</span><br>
+                        <span class="label">css</span>
+                        <span class="label">Web应用支持库</span>
+                    </div>
+                </div><br>
+                <div class="projectbox container" onclick="window.open('https://www.40code.com/#page=work&id=4703','_blank')">
+                    <img class="projectbox facer" src="https://ooo.0x0.ooo/2023/12/31/OKj4Gg.png"><br>
+                    <div class="projectbox content">
+                        <span class="projectbox content-title">「涂鸦跑酷v3.0」</span><br>
+                        <span class="projectbox content-text">不一样的跑酷——涂鸦跑酷。一个按下空格躲避障碍物的小游戏，背景和角色手绘而成。</span><br>
+                        <span class="label">Scratch</span>
+                        <span class="label">游戏</span>
+                    </div>
+                </div>
+                <div class="projectbox container" onclick="window.open('./article.html?Name=yiyan','_blank')">
+                    <img class="projectbox facer" src="https://s1.ax1x.com/2023/07/17/pCorq8s.png"><br>
+                    <div class="projectbox content">
+                        <span class="projectbox content-title">「一言api」</span><br>
+                        <span class="projectbox content-text">一个随机文案库，欢迎提供不超过20字的文案。使用此api可点击查看使用教程。</span><br>
+                        <span class="label">API</span>
+                        <span class="label">随机文案库</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div style="width: 1000px;height: 1000px;">
+        <div class="projectCard" style="width: 1000px;height: 400px;overflow-y: auto;">
+            <h2 align="center">文章</h2>
+            <div class="projectbox container" onclick="window.open('./article.html?Name=yiyan','_blank')">
+              <img class="projectbox facer" src="https://s1.ax1x.com/2023/07/17/pCorq8s.png"><br>
+              <div class="projectbox content">
+                  <span class="dark-span projectbox content-title">一言api</span><br>
+                  <span class="dark-span projectbox content-text">随机文案库，点击查看使用教程。</span><br>
+                  <span class="dark-span label"> 1 </span>
+                  <span class="dark-span label">#API</span>
+              </div>
+            </div>
+            <div class="projectbox container" onclick="window.open('./article.html?Name=2sc','_blank')">
+              <img class="projectbox facer" src="https://resources.codingal.com/hs-fs/hubfs/how-to-start-coding-blog/8.png?width=1400&name=8.png"><br>
+              <div class="projectbox content">
+                  <span class="dark-span projectbox content-title">手把手教你二次开发Scratch</span><br>
+                  <span class="dark-span projectbox content-text">Scratch二次开发教程--01部署环境</span><br>
+                  <span class="dark-span label"> 2-01 </span>
+                  <span class="dark-span label">#教程</span>
+              </div>
+            </div>
+            <div class="projectbox container" onclick="window.open('./article.html?Name=404','_blank')">
+              <img class="projectbox facer" src="https://s1.ax1x.com/2023/07/17/pCorq8s.png"><br>
+              <div class="projectbox content">
+                  <span class="dark-span projectbox content-title"> - </span><br>
+                  <span class="dark-span projectbox content-text"> - </span><br>
+                  <span class="dark-span label"> n </span>
+                  <span class="dark-span label"># - </span>
+              </div>
+            </div>
+        </div><br>
+        <div class="hw">
+            <div id="h1">helloworld</div>
+        </div><br>
+        <div class="share-button">
+            <span>本站相关</span>
+            <a href="" onclick="copyToClipboard()"><i class="fa fa-share-alt" aria-hidden="true"></i></a>
+            <a href="https://github.com/dqt1010/dqt1010.github.io"><i class="fa fa-github" aria-hidden="true"></i></a>
+            <p style="color: #000;">© 2020-2024 <a href="">Qita Dai</a> 版权所有</p>
+        </div>
+    </div>
+    <script src="/js/main.js"></script>
+    <script src="/js/quote.js"></script>
+    </body>
+</html>
+    

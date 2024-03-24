@@ -1,0 +1,8 @@
+$head;页面不见了？$line;
+$blank4;1.请检查网址是否有误；$line;
+$blank4;2.页面可能已被站长删除；$line;
+$blank4;3.试试回到首页。$line;
+$code-s;
+404 Not Found
+$code-e;
+$line;

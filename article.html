@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Qita Dai的个人主页</title>
+        <link rel="stylesheet" type="text/css" href="/main.css">
+        <link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+        <link rel="shortcut icon" href="/favicon.ico">
+        <meta name="keywords" content="DAI，DAIQI，DAIQITAO，TAO，DAIQITAO的主页，个人主页，主页">
+    <style>
+        #content {
+            width: 100%;
+            background-color: rgba(255, 255, 255, 0.7);
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.8);
+            min-height: 50vh;
+            width: 70vw;
+            display: inline-block;
+            margin-top: 100px;
+            border-radius: 10px;
+            padding: 40px;
+        }
+
+        #contents {
+            text-align: left;
+            margin-top: 10px;
+        }
+
+        @font-face {
+            font-family: "Consolas";
+            src: url(./fonts/Comic\ Sans\ MS.ttf);
+        }
+
+        code {
+            font-family: Consolas !important;
+            border-radius: 10px;
+            padding: 20px !important;
+            background-color: rgb(30, 30, 30) !important;
+            display: inline-block;
+            white-space: pre-wrap;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            width: fit-content;
+        }
+    </style>
+</head>
+<body style="background-color: #07081c;">
+    <canvas id="StarStage"></canvas>
+        <center><span style="color:#fff;font-size:30px;">daiqitao的文章</span><br></center>
+    <div id="content">
+        <span id="title" style="font-size: 25px;font-weight: bold;">Loading title...</span>
+        <div id="contents">Loading content...</div>
+    </div><br>
+    <center><hr style="margin-top: 20px;"></center>
+    <div style="height: 50px;"></div>
+    <script src="https://cdn.staticfile.org/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/11.9.0/styles/tomorrow-night-bright.min.css">
+    <script src="https://cdn.staticfile.org/highlight.js/11.9.0/highlight.min.js"></script>
+    <script src="https://cdn.staticfile.org/highlight.js/11.9.0/languages/javascript.min.js"></script>
+    <script>
+        const Searcher = new URLSearchParams(window.location.search);
+        var ArticleName = Searcher.get("Name");
+        function LoadText(Text) {
+            return (
+                Text
+                    .replaceAll("<", "&lt;")
+                    .replaceAll(">", "&gt;")
+                    .replaceAll("$head;", '<div style="width:4ch;display:inline-block;"></div>')
+                    .replaceAll("$line;", "<br>")
+                    .replaceAll("$code-text-s;", '<br><code class="language-plaintext">')
+                    .replaceAll("$code-js-s;", '<br><code class="language-javascript">')
+                    .replaceAll("$code-html-s;", '<br><code class="language-xml">')
+                    .replaceAll("$code-s;", "<br><code>")
+                    .replaceAll("$code-e;", "</code>")
+                    .replaceAll("$blank4;", "&nbsp;&nbsp;&nbsp;&nbsp;")
+                    .replaceAll("$img-s;", '<img width="800" height="400" src="')
+                    .replaceAll("$img-e;", '">')
+                    .replaceAll("$link-s;", '<a style="color: black;" href="')
+                    .replaceAll("$link-e1;", '">')
+                    .replaceAll("$link-e2;", '</a>')
+            );
+        };
+        function GetArticle(Name) {
+            $.ajax({
+                url: `./articleData/${Name}.title`,
+                type: "get",
+                success(data) {
+                    document.getElementById("title").innerHTML = LoadText(data);
+                },
+                error: () => GetArticle("Template")
+            });
+            $.ajax({
+                url: `./articleData/${Name}.content`,
+                type: "get",
+                success(data) {
+                    document.getElementById("contents").innerHTML = LoadText(data);
+                    //*
+                    document.querySelectorAll("code").forEach((e) => {
+                        hljs.highlightElement(e);
+                        e.innerHTML = e.innerHTML.slice(1);
+                        //*
+                        document.querySelectorAll("span").forEach((f) => {
+                            if (f.className.includes("language-")) {
+                                f.style.display = "contents";
+                            };
+                        });
+                        //*/
+                    });
+                    //*/
+                },
+                error: () => GetArticle("Template")
+            });
+        };
+        GetArticle(ArticleName);
+    </script>
+    <script src="/js/main.js"></script>
+</body>
+
+</html>
